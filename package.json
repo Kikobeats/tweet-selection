@@ -33,6 +33,5 @@
     "gulp-strip-css-comments": "latest",
     "gulp-uglify": "latest1"
   },
-  "engines": {},
   "license": "MIT"
 }
