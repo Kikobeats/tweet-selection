@@ -1,7 +1,18 @@
+<a name="0.2.2"></a>
+## 0.2.2 (2016-01-21)
+
+
+* Adjust box width ([eea60a2](https://github.com/kikobeats/tweet-selection/commit/eea60a2))
+* Don't handle internally DOM state ([d5db91e](https://github.com/kikobeats/tweet-selection/commit/d5db91e))
+* Update scripts ([6fadb4b](https://github.com/kikobeats/tweet-selection/commit/6fadb4b))
+
+
+
 <a name="0.2.1"></a>
 ## 0.2.1 (2016-01-21)
 
 
+* 0.2.1 releases ([458dc12](https://github.com/kikobeats/tweet-selection/commit/458dc12))
 * Remove gulp-changed dep ([be046c8](https://github.com/kikobeats/tweet-selection/commit/be046c8))
 * Remove vendors ([cf567c5](https://github.com/kikobeats/tweet-selection/commit/cf567c5))
 * Update scripts ([c5a9955](https://github.com/kikobeats/tweet-selection/commit/c5a9955))
