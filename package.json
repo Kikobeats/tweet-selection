@@ -25,7 +25,6 @@
     "coffee-script": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
-    "gulp-changed": "latest",
     "gulp-concat": "latest",
     "gulp-cssmin": "latest",
     "gulp-header": "latest",

@@ -6,7 +6,6 @@ concat      = require 'gulp-concat'
 header      = require 'gulp-header'
 uglify      = require 'gulp-uglify'
 cssmin      = require 'gulp-cssmin'
-changed     = require 'gulp-changed'
 shorthand   = require 'gulp-shorthand'
 pkg         = require './package.json'
 prefix      = require 'gulp-autoprefixer'
@@ -36,7 +35,6 @@ banner = [ "/**"
 
 gulp.task 'css', ->
   gulp.src src.css
-  .pipe changed dist.folder
   .pipe concat '' + dist.name + '.css'
   .pipe prefix()
   .pipe strip all: true
@@ -48,7 +46,6 @@ gulp.task 'css', ->
 
 gulp.task 'js', ->
   gulp.src src.js
-  .pipe changed dist.folder
   .pipe concat '' + dist.name + '.js'
   .pipe uglify()
   .pipe header banner, pkg: pkg
