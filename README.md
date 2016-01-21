@@ -35,7 +35,7 @@ API and default values are:
 $.tweetSelection({
   selector: 'body' // selector to bind the event listener.
   minimumTextSelected: 3, // mininum words to show the popup
-  shareClass: '.tweetSelection' // class associated with the popup for styling
+  shareClass: '.tweet-selection' // class associated with the popup for styling
 })
 ```
 
