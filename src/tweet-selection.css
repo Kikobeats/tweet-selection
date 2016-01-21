@@ -43,7 +43,7 @@
   margin-left: -35px;
   background: #14485f;
   color: #FFF;
-  width: 70px;
+  width: 65px;
   height: 35px;
   display: block;
   cursor: pointer;
@@ -73,7 +73,7 @@
 .tweet-selection:before {
   font: normal normal normal 18px/39px "tweetSelection";
   display: block;
-  width: 70px;
+  width: 65px;
   height: 35px;
   text-align: center;
   text-transform: none;
