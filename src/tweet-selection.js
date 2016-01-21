@@ -62,35 +62,31 @@
       })
     }
 
-    function load () {
-      // actions when the user starts the selection
-      $(params.selector).mousedown(function (event) {
-        // take the position of the mouse where the user starts the selection
-        // we need this for showing the share button in the middle of the selection
-        info.mouse.top = event.clientY + window.pageYOffset
-        info.mouse.left = event.clientX
+    // actions when the user starts the selection
+    $(params.selector).mousedown(function (event) {
+      // take the position of the mouse where the user starts the selection
+      // we need this for showing the share button in the middle of the selection
+      info.mouse.top = event.clientY + window.pageYOffset
+      info.mouse.left = event.clientX
 
-        // remove share button and the old selection
-        // Just if the user clicks the left button of the mouse.
-        // For right click we must show the genuine browser menu.
-        if (!isRightClick(event) && info.isVisible) {
-          removeShare()
-          info.isVisible = false
-        }
-      })
+      // remove share button and the old selection
+      // Just if the user clicks the left button of the mouse.
+      // For right click we must show the genuine browser menu.
+      if (!isRightClick(event) && info.isVisible) {
+        removeShare()
+        info.isVisible = false
+      }
+    })
 
-      // actions when the user ends the selection
-      $(params.selector).mouseup(function (event) {
-        var textSelected = getSelectedText()
+    // actions when the user ends the selection
+    $(params.selector).mouseup(function (event) {
+      var textSelected = getSelectedText()
 
-        // go further just if user click is left mouse click and the selection length is grater than 3 characters
-        if (textSelected.length > params.minimumTextSelected && !isRightClick(event)) {
-          addShare(getQuoteFromText(textSelected), event)
-          info.isVisible = true
-        }
-      })
-    }
-
-    $(load)
+      // go further just if user click is left mouse click and the selection length is grater than 3 characters
+      if (textSelected.length > params.minimumTextSelected && !isRightClick(event)) {
+        addShare(getQuoteFromText(textSelected), event)
+        info.isVisible = true
+      }
+    })
   }
 })($)
