@@ -40,7 +40,7 @@ gulp.task 'css', ->
   .pipe concat '' + dist.name + '.css'
   .pipe prefix()
   .pipe strip all: true
-  #.pipe shorthand
+  .pipe shorthand()
   .pipe cssmin()
   .pipe header banner, pkg: pkg
   .pipe gulp.dest dist.folder
