@@ -30,7 +30,7 @@
     params = params || {}
     params.selector = params.selector || 'body'
     params.minimumTextSelected = params.minimumTextSelected || CONST.WORDS.MIN
-    params.shareClass = params.shareClass || '.tweetSelection'
+    params.shareClass = params.shareClass || '.tweet-selection'
     return params
   }
 
@@ -49,7 +49,7 @@
 
       var tag = '<a href="https://twitter.com/share?url=' + encodeURIComponent(window.location.href)
       tag += '&text=' + encodeURIComponent(text)
-      tag += '" class=\'' + params.shareClass.substr(1) + "'"
+      tag += '" class=\'' + params.shareClass.substr(1) + " fade-in one'"
       tag += ' onclick="window.open(this.href, \'\', \'menubar=no,toolbar=no,resizable=yes,'
       tag += 'scrollbars=yes,height=300,width=600\');return false;"></a>'
 

@@ -6,17 +6,15 @@
   src: url("fonts/tweetSelection.eot?#iefix") format("embedded-opentype"),
        url("fonts/tweetSelection.woff") format("woff"),
        url("fonts/tweetSelection.ttf") format("truetype"),
-       url("fonts/tweetSelection.svg#tweetSelection") format("svg");
+       url("fonts/tweetSelection.svg#t") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-/* button body */
+@keyframes fade-in { from { opacity:0; } to { opacity:1; } }
 
-.tweetSelection {
+.tweet-selection {
   border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
   margin-left: -35px;
   background: #14485f;
   color: #FFF;
@@ -26,11 +24,14 @@
   cursor: pointer;
   text-decoration: none;
   transition: background 0.5s ease;
+
+  opacity:0;
+  animation:fade-in ease-in 1;
+  animation-fill-mode:forwards;
+  animation-duration:0.3s;
 }
 
-/* button bottom arrow */
-
-.tweetSelection:after {
+.tweet-selection:after {
   border: 8px 7.5px 0 7.5px solid;
   border-color: #14485f transparent transparent;
   margin-top: 0;
@@ -43,13 +44,11 @@
   transition: border-color 0.5s ease;
 }
 
-.tweetSelection:hover:after {
+.tweet-selection:hover:after {
   border-color: #17a8e3 transparent transparent;
 }
 
-/* button icon */
-
-.tweetSelection:before {
+.tweet-selection:before {
   font: normal normal normal 18px/39px "tweetSelection";
   display: block;
   width: 70px;
@@ -62,6 +61,6 @@
   content: "t";
 }
 
-.tweetSelection:hover {
+.tweet-selection:hover {
   background: #17a8e3;
 }
