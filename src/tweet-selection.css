@@ -11,7 +11,37 @@
   font-style: normal;
 }
 
-@keyframes fade-in { from { opacity:0; } to { opacity:1; } }
+@keyframes pop-upwards {
+  0% {
+    -webkit-transform: matrix(.97, 0, 0, 1, 0, 12);
+    transform: matrix(.97, 0, 0, 1, 0, 12);
+    opacity: 0;
+  }
+
+  20% {
+    -webkit-transform: matrix(.99, 0, 0, 1, 0, 2);
+    transform: matrix(.99, 0, 0, 1, 0, 2);
+    opacity: .7;
+  }
+
+  40% {
+    -webkit-transform: matrix(1, 0, 0, 1, 0, -1);
+    transform: matrix(1, 0, 0, 1, 0, -1);
+    opacity: 1;
+  }
+
+  70% {
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    opacity: 1;
+  }
+}
 
 .tweet-selection {
   border-radius: 4px;
@@ -23,12 +53,9 @@
   display: block;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.5s ease;
-
-  opacity:0;
-  animation:fade-in ease-in 1;
-  animation-fill-mode:forwards;
-  animation-duration:0.3s;
+  transition: background 180ms ease-out;
+  opacity: 0;
+  animation: pop-upwards 180ms forwards linear;
 }
 
 .tweet-selection:after {
@@ -41,11 +68,11 @@
   content: '';
   width: 0;
   height: 0;
-  transition: border-color 0.5s ease;
+  transition: border-color 180ms ease-out;
 }
 
 .tweet-selection:hover:after {
-  border-color: #17a8e3 transparent transparent;
+  border-color: #55acee transparent transparent;
 }
 
 .tweet-selection:before {
@@ -62,5 +89,5 @@
 }
 
 .tweet-selection:hover {
-  background: #17a8e3;
+  background: #55acee;
 }
