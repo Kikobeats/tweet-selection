@@ -33,11 +33,15 @@ API and default values are:
 
 ```js
 $.tweetSelection({
-  selector: 'body' // selector to bind the event listener.
-  minimumTextSelected: 3, // mininum words to show the popup
+  height: 300,
+  width: 600,
+  selector: 'body'               // selector to bind the event listener.
+  minimumTextSelected: 3,        // mininum words to show the popup
   shareClass: '.tweet-selection' // class associated with the popup for styling
 })
 ```
+
+Also support the rest of the query optional parameters for [Tweet Web intent](https://dev.twitter.com/web/tweet-button/web-intent).
 
 ## License
 

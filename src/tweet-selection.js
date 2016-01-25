@@ -31,6 +31,8 @@
     params.selector = params.selector || 'body'
     params.minimumTextSelected = params.minimumTextSelected || CONST.WORDS.MIN
     params.shareClass = params.shareClass || '.tweet-selection'
+    params.height = params.height.toString() || '300'
+    params.width = params.width.toString() || '600'
     return params
   }
 
@@ -47,11 +49,19 @@
       var boxVerticalPosition = info.mouse.top - 60
       var boxHorizontalPosition = info.mouse.left + (event.clientX - info.mouse.left) / 2
 
+      // basic query parameters
       var tag = '<a href="https://twitter.com/share?url=' + encodeURIComponent(window.location.href)
       tag += '&text=' + encodeURIComponent(text)
+
+      // optional query parameters
+      ;['hashtags', 'via', 'related'].forEach(function (optional) {
+        if (params[optional]) tag += '&' + optional + '=' + encodeURIComponent(params[optional])
+      })
+
       tag += '" class=\'' + params.shareClass.substr(1) + " fade-in one'"
       tag += ' onclick="window.open(this.href, \'\', \'menubar=no,toolbar=no,resizable=yes,'
-      tag += 'scrollbars=yes,height=300,width=600\');return false;"></a>'
+      tag += 'scrollbars=yes,height=' + params.height
+      tag += ',width=' + params.width + '\');return false;"></a>'
 
       $('body').append(tag)
 
