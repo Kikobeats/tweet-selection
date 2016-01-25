@@ -31,8 +31,8 @@
     params.selector = params.selector || 'body'
     params.minimumTextSelected = params.minimumTextSelected || CONST.WORDS.MIN
     params.shareClass = params.shareClass || '.tweet-selection'
-    params.height = params.height.toString() || '300'
-    params.width = params.width.toString() || '600'
+    params.height = (params.height || 300).toString()
+    params.width = (params.width || 600).toString()
     return params
   }
 
