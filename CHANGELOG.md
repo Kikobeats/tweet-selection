@@ -1,8 +1,17 @@
+<a name="0.3.1"></a>
+## 0.3.1 (2016-01-25)
+
+
+* Fix toString ([cad1916](https://github.com/kikobeats/tweet-selection/commit/cad1916))
+
+
+
 <a name="0.3.0"></a>
 # 0.3.0 (2016-01-25)
 
 
 * Add more parameters ([a075832](https://github.com/kikobeats/tweet-selection/commit/a075832))
+* Release 0.3.0 ([4868265](https://github.com/kikobeats/tweet-selection/commit/4868265))
 * Update bumped scripts ([f2a1b03](https://github.com/kikobeats/tweet-selection/commit/f2a1b03))
 * Update README.md ([f2821d2](https://github.com/kikobeats/tweet-selection/commit/f2821d2))
 
