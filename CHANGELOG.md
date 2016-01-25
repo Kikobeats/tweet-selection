@@ -1,7 +1,18 @@
+<a name="0.3.0"></a>
+# 0.3.0 (2016-01-25)
+
+
+* Add more parameters ([a075832](https://github.com/kikobeats/tweet-selection/commit/a075832))
+* Update bumped scripts ([f2a1b03](https://github.com/kikobeats/tweet-selection/commit/f2a1b03))
+* Update README.md ([f2821d2](https://github.com/kikobeats/tweet-selection/commit/f2821d2))
+
+
+
 <a name="0.2.2"></a>
 ## 0.2.2 (2016-01-21)
 
 
+* 0.2.2 releases ([b170664](https://github.com/kikobeats/tweet-selection/commit/b170664))
 * Adjust box width ([eea60a2](https://github.com/kikobeats/tweet-selection/commit/eea60a2))
 * Don't handle internally DOM state ([d5db91e](https://github.com/kikobeats/tweet-selection/commit/d5db91e))
 * Update scripts ([6fadb4b](https://github.com/kikobeats/tweet-selection/commit/6fadb4b))

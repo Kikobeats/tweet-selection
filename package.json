@@ -2,7 +2,7 @@
   "name": "tweet-selection",
   "description": "Tweet selected text. Like Medium but out of the box.",
   "homepage": "https://github.com/kikobeats/tweet-selection",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "author": {
     "name": "Kiko Beats",
     "url": "https://github.com/kikobeats"
