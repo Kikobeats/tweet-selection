@@ -14,25 +14,44 @@
     WORDS: {
       MAX: 107,
       MIN: 3
+    },
+
+    ELLIPSIS: '…',
+    SELECTOR: 'body',
+
+    HEIGHT: 300,
+    WIDTH: 400,
+    SHARE_CLASS: '.tweet-selection',
+
+    QUOTE: {
+      LENGTH: 2,
+      LEFT: '“',
+      RIGHT: '”'
     }
   }
 
-  function getQuoteFromText (text) {
-    if (text.length > CONST.WORDS.MAX + 2) {
-      text = text.substring(0, CONST.WORDS.MAX + 5)
-      text += '...'
+  function getQuoteFromText (text, params) {
+    var maxLength = CONST.WORDS.MAX + CONST.QUOTE.LENGTH
+
+    if (text.length > maxLength) {
+      text = text.substring(0, maxLength + params.ellipsis.length)
+      text += params.ellipsis
     }
 
-    return '"' + text + '"'
+    return params.quoteLeft + text + params.quoteRight
   }
 
   function determinateParams (params) {
     params = params || {}
-    params.selector = params.selector || 'body'
+    params.selector = params.selector || CONST.SELECTOR
     params.minimumTextSelected = params.minimumTextSelected || CONST.WORDS.MIN
-    params.shareClass = params.shareClass || '.tweet-selection'
-    params.height = (params.height || 300).toString()
-    params.width = (params.width || 600).toString()
+    params.shareClass = params.shareClass || CONST.SHARE_CLASS
+    params.height = (params.height || CONST.HEIGHT).toString()
+    params.width = (params.width || CONST.WIDTH).toString()
+    params.ellipsis = params.ellipsis || CONST.ELLIPSIS
+    params.quoteRight = params.quoteRight || CONST.QUOTE.RIGHT
+    params.quoteLeft = params.quoteLeft || CONST.QUOTE.LEFT
+
     return params
   }
 
@@ -94,7 +113,7 @@
 
       // go further just if user click is left mouse click and the selection length is grater than 3 characters
       if (textSelected.length > params.minimumTextSelected && !isRightClick(event)) {
-        addShare(getQuoteFromText(textSelected), event)
+        addShare(getQuoteFromText(textSelected, params), event)
         info.isVisible = true
       }
     })
