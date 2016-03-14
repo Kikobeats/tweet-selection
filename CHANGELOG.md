@@ -1,8 +1,17 @@
+<a name="1.0.0"></a>
+# 1.0.0 (2016-03-14)
+
+
+* Add more options ([ce119b2](https://github.com/kikobeats/tweet-selection/commit/ce119b2))
+
+
+
 <a name="0.3.1"></a>
 ## 0.3.1 (2016-01-25)
 
 
 * Fix toString ([cad1916](https://github.com/kikobeats/tweet-selection/commit/cad1916))
+* Release 0.3.1 ([101b16e](https://github.com/kikobeats/tweet-selection/commit/101b16e))
 
 
 
