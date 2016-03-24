@@ -1,3 +1,9 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/kikobeats/tweet-selection/compare/1.0.0...v1.0.1) (2016-03-24)
+
+
+
+
 <a name="1.0.0"></a>
 # 1.0.0 (2016-03-14)
 

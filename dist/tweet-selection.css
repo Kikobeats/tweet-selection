@@ -1,6 +1,6 @@
 /**
  * tweet-selection - Tweet selected text. Like Medium but out of the box.
- * @version 1.0.0
+ * @version 1.0.1
  * @link    https://github.com/kikobeats/tweet-selection
  * @author  Kiko Beats (https://github.com/kikobeats)
  * @license MIT
