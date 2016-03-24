@@ -2,7 +2,7 @@
 
 <p align="center">
   <br>
-  <img src="http://i.imgur.com/kkqLRot.png" alt="tweet-selection">
+  <img src="http://g.recordit.co/N2fdZHEWsk.gif" alt="tweet-selection">
   <br>
 </p>
 
