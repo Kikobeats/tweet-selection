@@ -54,7 +54,7 @@
 }
 
 .tweet-selection:after {
-  border: 8px 7.5px 0 7.5px solid;
+  border: 8px solid;
   border-color: #14485f transparent transparent;
   margin-top: 0;
   margin-left: -7px;
