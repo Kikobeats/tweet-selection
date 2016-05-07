@@ -1,3 +1,11 @@
+<a name="2.0.0"></a>
+# 2.0.0 (2016-05-07)
+
+* Fix typo ([890b990](https://github.com/kikobeats/tweet-selection/commit/890b990))
+* Simplify interface ([fb21ff4](https://github.com/kikobeats/tweet-selection/commit/fb21ff4))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/kikobeats/tweet-selection/compare/1.0.0...v1.0.1) (2016-03-24)
 
