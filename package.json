@@ -30,7 +30,7 @@
     "gulp-header": "latest",
     "gulp-shorthand": "latest",
     "gulp-strip-css-comments": "latest",
-    "gulp-uglify": "latest1"
+    "gulp-uglify": "latest"
   },
   "license": "MIT"
 }
