@@ -32,10 +32,9 @@ bower install tweet-selection --save
 API and default values are:
 
 ```js
-$.tweetSelection({
+$('body').tweetSelection({
   height: 300,
   width: 600,
-  selector: 'body'
   minimumTextSelected: 3,
   shareClass: '.tweet-selection'
   ellipsis: '…',

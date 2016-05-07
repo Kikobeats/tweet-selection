@@ -11,52 +11,29 @@
   }
 
   var CONST = {
-    WORDS: {
-      MAX: 107,
-      MIN: 3
-    },
-
-    ELLIPSIS: '…',
-    SELECTOR: 'body',
-
-    HEIGHT: 300,
-    WIDTH: 400,
-    SHARE_CLASS: '.tweet-selection',
-
-    QUOTE: {
-      LENGTH: 2,
-      LEFT: '“',
-      RIGHT: '”'
+    WORDS_MAX: 109, // 107 chars + 2 (qoute marks)
+    DEFAULTS: {
+      minimumTextSelected: 3,
+      shareClass: '.tweet-selection',
+      height: '300',
+      width: '400',
+      ellipsis: '…',
+      quoteRight: '”',
+      quoteLeft: '“'
     }
   }
 
   function getQuoteFromText (text, params) {
-    var maxLength = CONST.WORDS.MAX + CONST.QUOTE.LENGTH
-
-    if (text.length > maxLength) {
-      text = text.substring(0, maxLength + params.ellipsis.length)
+    if (text.length > CONST.WORDS_MAX) {
+      text = text.substring(0, CONST.WORDS_MAX + params.ellipsis.length)
       text += params.ellipsis
     }
 
     return params.quoteLeft + text + params.quoteRight
   }
 
-  function determinateParams (params) {
-    params = params || {}
-    params.selector = params.selector || CONST.SELECTOR
-    params.minimumTextSelected = params.minimumTextSelected || CONST.WORDS.MIN
-    params.shareClass = params.shareClass || CONST.SHARE_CLASS
-    params.height = (params.height || CONST.HEIGHT).toString()
-    params.width = (params.width || CONST.WIDTH).toString()
-    params.ellipsis = params.ellipsis || CONST.ELLIPSIS
-    params.quoteRight = params.quoteRight || CONST.QUOTE.RIGHT
-    params.quoteLeft = params.quoteLeft || CONST.QUOTE.LEFT
-
-    return params
-  }
-
-  $.tweetSelection = function (params) {
-    params = determinateParams(params)
+  $.fn.tweetSelection = function (params) {
+    params = $.extend(CONST.DEFAULTS, params)
     var info = { mouse: {}, isVisible: false }
 
     function removeShare () {
@@ -92,7 +69,7 @@
     }
 
     // actions when the user starts the selection
-    $(params.selector).mousedown(function (event) {
+    $(this).mousedown(function (event) {
       // take the position of the mouse where the user starts the selection
       // we need this for showing the share button in the middle of the selection
       info.mouse.top = event.clientY + window.pageYOffset
@@ -108,7 +85,7 @@
     })
 
     // actions when the user ends the selection
-    $(params.selector).mouseup(function (event) {
+    $(this).mouseup(function (event) {
       var textSelected = getSelectedText()
 
       // go further just if user click is left mouse click and the selection length is grater than 3 characters
