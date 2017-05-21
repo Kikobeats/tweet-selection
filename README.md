@@ -36,7 +36,7 @@ $('.content').tweetSelection({
   height: 300,
   width: 600,
   minimumTextSelected: 3,
-  shareClass: '.tweet-selection'
+  shareClass: '.tweet-selection',
   ellipsis: '…',
   quoteLeft: '“',
   quoteRight: '”'
