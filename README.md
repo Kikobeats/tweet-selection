@@ -45,6 +45,10 @@ $('.content').tweetSelection({
 
 Also support the rest of the query optional parameters for [Tweet Web intent](https://dev.twitter.com/web/tweet-button/web-intent).
 
+## Related
+
+- [TweetThis](https://github.com/CloudflareApps/TweetThis) - Allows visitors to tweet text content on your webpage by highlighting it.
+
 ## License
 
 MIT © [Kiko Beats](http://kikobeats.com)
