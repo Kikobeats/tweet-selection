@@ -1,5 +1,7 @@
 # tweet-selection
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Kikobeats/tweet-selection.svg)](https://greenkeeper.io/)
+
 <p align="center">
   <br>
   <img src="http://g.recordit.co/N2fdZHEWsk.gif" alt="tweet-selection">
